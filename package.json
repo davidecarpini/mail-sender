@@ -1,5 +1,5 @@
 {
-  "name": "package-default",
+  "name": "mail-sender",
   "version": "1.0.0",
   "main": "./build/index.js",
   "typings": "./build/index.d.ts",
@@ -8,11 +8,14 @@
     "start": "node ./",
     "start-dev": "ts-node index.ts",
     "start-watch": "nodemon --watch '**/*.ts' --exec 'ts-node' index.ts",
+    "start-prod": "pm2 start --name mail-sender -i 0 ./build/index.js",
+    "stop": "pm2 delete mail-sender",
     "test": "nodemon --watch '**/*.ts' --exec 'ts-mocha' test.ts",
     "compile": "yarn tsc -p ./tsconfig.json",
     "watch": "yarn compile -w"
   },
   "dependencies": {
+    "@koa/cors": "2",
     "@types/mocha": "^5.2.6",
     "@types/node": "^12.0.0",
     "convict": "^5.0.0",
@@ -22,6 +25,7 @@
     "koa-router": "^7.4.0",
     "log4js": "^4.1.1",
     "mocha": "^6.1.4",
+    "nodemailer": "^6.2.1",
     "ts-mocha": "^6.0.0",
     "ts-node": "^8.1.0",
     "typescript": "^3.3.1"
