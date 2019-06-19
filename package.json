@@ -1,0 +1,29 @@
+{
+  "name": "package-default",
+  "version": "1.0.0",
+  "main": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./",
+    "start-dev": "ts-node index.ts",
+    "start-watch": "nodemon --watch '**/*.ts' --exec 'ts-node' index.ts",
+    "test": "nodemon --watch '**/*.ts' --exec 'ts-mocha' test.ts",
+    "compile": "yarn tsc -p ./tsconfig.json",
+    "watch": "yarn compile -w"
+  },
+  "dependencies": {
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^12.0.0",
+    "convict": "^5.0.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "log4js": "^4.1.1",
+    "mocha": "^6.1.4",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.3.1"
+  }
+}
