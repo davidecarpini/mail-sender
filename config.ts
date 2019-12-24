@@ -4,7 +4,7 @@ export default convict({
   server: {
     port: {
       format: 'port',
-      default: 30201,
+      default: 3000,
       env: 'SERVER_PORT'
     }
   },
@@ -17,7 +17,7 @@ export default convict({
     smtp: {
       host: {
         format: String,
-        default: 'smtp.sdabocconi.it',
+        default: '',
         env: 'SMTP_HOST'
       },
       port: {

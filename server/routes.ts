@@ -18,8 +18,8 @@ router
         host: 'smtp.mailtrap.io',
         port: 2525,
         auth: {
-          user: 'd566a1d237c40b',
-          pass: 'cf25bd4f0bca36'
+          user: '',
+          pass: ''
         }
       };
     } else {
